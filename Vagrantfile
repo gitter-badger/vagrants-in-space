@@ -35,6 +35,9 @@ Vagrant.configure("2") do |config|
 	config.vm.network :private_network, ip: "192.168.50.5"
 
 	# Sync folders
+	## Not necessary to sync the root folder
+	config.vm.synced_folder '.', '/vagrant', disabled: true
+	## Syncs the config directory so that setup.sh can update the Nginx configuration from within the Vagrant machine
 	config.vm.synced_folder "config/", "/home/vagrant/config"
 	## Syncing the /user directory because typically you don't touch anything else in a Grav install
 	config.vm.synced_folder "user/", "/var/www/html/user", :create => true, :group => "www-data", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
