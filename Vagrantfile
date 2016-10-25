@@ -12,6 +12,8 @@ Vagrant.configure("2") do |config|
 		# Set the name of the machine within VirtualBox to the parent directory
 		## To customize you can rename the parent directory or specify here like so: v.name = "My Vagrant Machine"
 		v.name = File.basename(Dir.pwd)
+		# No need for audio
+		v.customize ["modifyvm", :id, "--audio", "none"]
 	end
 
 	config.ssh.forward_agent = true
