@@ -7,9 +7,8 @@ Vagrant.configure("2") do |config|
 
 	config.vm.provider :virtualbox do |v|
 		# Set CPU and memory to mimic the lowest configuration on DigitalOcean
-		v.customize ["modifyvm", :id, "--memory", 512]
-		v.customize ["modifyvm", :id, "--cpus", 1]
-
+		v.memory = 512
+		v.cpus = 1
 		# Set the name of the machine within VirtualBox to the parent directory
 		## To customize you can rename the parent directory or specify here like so: v.name = "My Vagrant Machine"
 		v.name = File.basename(Dir.pwd)
