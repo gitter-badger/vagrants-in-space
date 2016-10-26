@@ -2,6 +2,8 @@
 
 # Vagrants in Space
 
+[![Join the chat at https://gitter.im/vagrants-in-space/Lobby](https://badges.gitter.im/vagrants-in-space/Lobby.svg)](https://gitter.im/vagrants-in-space/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A Vagrant machine for **[Grav](https://getgrav.org)** development within **VirtualBox**.
 
 ## Prepare for launch
